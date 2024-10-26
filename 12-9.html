@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form action="" id="usernameform">
+    <input type="text" id="username">
+  <button type="submit" >click me</button>
+</form>
+<p id="msg"></p>
+    <script>
+      var a=prompt("enter a string")
+    var b=a.split("").reverse().join("");
+    if(a==b){
+      console.log("palindrone");
+      
+    }
+    else{
+      console.log("not palindrome");
+      
+    }
+    
+
+      var a=prompt("enter a multiple words");
+      var b=a.split(" ");
+      console.log(b.length);
+      
+
+      var a=prompt("enter first name");
+      var b=prompt("enter second name");
+      var c=a .toLowerCase+"."+b.toLowerCase+"@gmail.com";
+      console.log(c);
+      
+      var str="hello";
+      var b=str.match(/[aeiou]/g);
+      console.log(b.length);
+      
+      var a=prompt("enter a sentence").toUpperCase();
+      console.log(a);
+      var a=prompt("enter a sentence").toLowerCase();
+      console.log(a);
+      var a=prompt("enter a string").split("").reverse().join("")
+    console.log(a);
+    
+      
+       document.getElementById('usernameform').addEventListener('submit',function(event){
+        event.preventDefault();
+        var username=document.getElementById('username').value;
+        var msg=document.getElementById('msg')
+        if(username.length>=5 && username.length<=15){
+            msg.textContent="username is valid"
+            msg.style.color="green";
+           
+            
+        }
+        else{
+              msg.textContent="username is invalid"
+            msg.style.color="red"
+           
+        }
+       })
+        
+    </script>
+</body>
+</html>
